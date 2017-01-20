@@ -17,7 +17,7 @@ Using PIP :
      
 # Creating a Configuration File
 
-This config file, having the Program/worker that can keep running always. You can your own conf file intead.
+This config file, having the Program/worker that can keep running always. You can create your own conf file intead.
 
 Once the Supervisor installation has completed, run `echo_supervisord_conf`. This will print a “sample” Supervisor configuration file to your terminal’s stdout.
 
