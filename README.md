@@ -60,9 +60,13 @@ Doing above command should started the process, if not, do it manually :
 
     supervisorctl start all
     
+# Errors & Solutions
+
+- http://stackoverflow.com/questions/40909842/supervisor-fatal-exited-too-quickly-process-log-may-have-details
+- http://stackoverflow.com/questions/18859063/supervisor-socket-error-issue
+    
     
 # Reference
 
-Supervisord - http://supervisord.org/
-
-Step by Step : https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
+ - Supervisord : http://supervisord.org/
+ - Step by Step : https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
