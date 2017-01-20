@@ -3,13 +3,13 @@ Keep alive laravel queue's worker using supervisord
 
 # Installation
 
-1) Method 1
+**1) Method 1**
 
 Using easy_install, which is a feature of setuptools. This is the preferred method of installation
 
     easy_install supervisor
     
-2) Method 2
+**2) Method 2**
 
 Using PIP :
  
@@ -64,4 +64,5 @@ Doing above command should started the process, if not, do it manually :
 # Reference
 
 Supervisord - http://supervisord.org/
+
 Step by Step : https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
