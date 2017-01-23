@@ -29,6 +29,23 @@ For easy setup, just use below command :
 
     echo_supervisord_conf -c /etc/supervisord.conf  // this will create supervisord.conf file with sample configuration
     
+If supervisord already running, it might throws out an error saying that port number/host already in used. If so, then we need to stop or send signal to process ID or process'name by using any of these this command :
+
+     - Find process ID first
+     - ps -A | grep supervisord
+     - may returned process ID something like '456456'
+     - then use kill command
+     - kill -U SIGTERM 456456
+     
+               or
+               
+     - directly remove the process using process'name
+     - pkill supervisord
+  
+After kill the process, need to start it again using this below command :
+
+     supervisord // // if supervisord command didnt exist, try use /usr/local/bin/supervisord
+    
 # Sample Of Program
 
 Here is the sample of program that trigger php artisan queue worker, and this worker keep running persistent even reload the web server or OSes.
@@ -50,15 +67,15 @@ Here is the sample of program that trigger php artisan queue worker, and this wo
 
 Before we can start process, make sure we notifiy supervisor the changes has been made on .conf by running this command :
 
-    supervisorctl reread
+    supervisorctl reread // if supervisorctl command didnt exist, try use /usr/local/bin/supervisorctl reread
     
 After that, commit the changes :
 
-    supervisorctl update
+    supervisorctl update // if supervisorctl command didnt exist, try use /usr/local/bin/supervisorctl update
     
 Doing above command should started the process, if not, do it manually :
 
-    supervisorctl start all
+    supervisorctl start all // if supervisorctl command didnt exist, try use /usr/local/bin/supervisorctl start all
     
 # Errors & Solutions
 
